@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+		#one {
+			width: 300px;
+			height: 300px;
+			background-color: black;
+			-webkit-transform: rotate(45deg);
+			margin: auto;
+		}
+		#two {
+			width: 150px;
+			height: 150px;
+			background-color: white;
+		}
+		#three {
+			width: 75px;
+			height: 75px;
+			background-color: black;
+		}
+		#all {
+			margin-top: 200px;
+		}
+		footer {
+			font-family: Helvetica, sans-serif;
+			font-size: 10px;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		footer a, a:visited {
+			color: #333333;
+		}
+			
+	</style>
 </head>
 <body>
-	<div style="background-color:black;width:100px;height:100px;"></div>
-	<div style="border:solid black 1px;width:100px;height:100px;"></div>
-	<div style="background-color:black;width:100px;height:100px;"></div>
+	<div id="all">
+		<div id="one">
+			<div id="two">
+				<div id="three">
+				</div>
+			</div>
+		</div>
+	</div>
+<footer>
+	<a href="a.html">Go to A</a>
+	<a href="c.html">Go to C</a>
+</footer>
 </body>
 </html>
