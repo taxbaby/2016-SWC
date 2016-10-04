@@ -1,0 +1,49 @@
+body {
+	
+	font-family: "Seaweed Script", sans-serif;
+	color: white;
+}
+html {
+	height: 250%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: #000000;
+  background: rgba(0,32,63,1);
+  background: -webkit-linear-gradient(top, rgba(0,32,63,1) 0%, rgba(0,10,20,1) 100%);
+  background: linear-gradient(to bottom, rgba(0,32,63,1) 0%, rgba(0,10,20,1) 100%);
+}
+.text {
+	padding-top: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 500px;
+	font-size: 40px;
+}
+pre {
+	color: white;
+}
+#squid {
+	padding-top: 400px;
+	padding-left: 500px;
+}
+#fish {
+	padding-top: 300px;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+h1 {
+	padding-top: 2px;
+	margin-top: 2px;
+	padding-bottom: 2px;
+	margin-bottom: 2px;
+}
+a:visited {
+	color: #ddd;
+}
+a:hover {
+	color: #ccc;
+}
