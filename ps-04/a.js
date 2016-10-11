@@ -16,20 +16,20 @@ var getColor = function(hue, saturation, lightness, alpha) {
 };
 
 var drawSquare = function(x,y,size) {
-  drawingPad.fillRect(x * 2, y * 2, size , size);
-  drawingPad.strokeStyle = getColor(0, 0, 100, 0.3);
+  drawingPad.fillRect(x * (x+100), y * (y+100), size , size);
+  drawingPad.strokeStyle = getColor(0, 0, 50, 1);
   drawingPad.strokeRect(x * size, y * size, size, size);
 }
 
-var size = 50;
-var numX = 10;
-var numY = 10;
+var size = 40;
+var numX = 100;
+var numY = 100;
 var randomLightness = 0;
 
 for(var x = 0 ; x < numX; x++) {
   for(var y = 0 ; y < numY; y++) {
-    randomLightness = Math.random() * 100;
-    drawingPad.fillStyle = getColor(0, 0, randomLightness, .5);
+    randomLightness = Math.random() * 50;
+    drawingPad.fillStyle = getColor(0, 0, randomLightness, .6);
     drawSquare(x,y,size);
   }
 }
