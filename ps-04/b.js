@@ -1,16 +1,22 @@
 var canvasB = document.getElementById('canvasB');
 var drawingPad = canvasB.getContext('2d');
 
-var startingPoint = 0;
-var endPoint = 0;
 
-for(var x = 0 ; x < 34 ; x++) {
-  for (var y = 0; y < 34; y++) {
-    startingPoint = Math.random() * 10;
-    endPoint = Math.random() * 50;
+var startX = 0;
+var startY = 0;
+var endX = 0;
+var endY = 0;
+
+for(var x = 0 ; x < 334 ; x++) {
+
+    startX = endY;
+    startY = Math.random()*10;
+    endX = startX +1;
+    endY = Math.random() * 500;
+
     drawingPad.beginPath();
-    drawingPad.moveTo(0,0);
-    drawingPad.lineTo(endPoint, startingPoint);
+    drawingPad.moveTo(startX,startY);
+    drawingPad.lineTo(endX, endY);
     drawingPad.stroke();
-}
+
 }
