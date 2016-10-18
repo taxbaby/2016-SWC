@@ -1,11 +1,8 @@
 var canvasB = document.getElementById('canvasB');
 var drawingPad = canvasB.getContext('2d');
+var degToRad = Math.PI/180;
 
-var getColor = function(hue, saturation, lightness, alpha) {
-  var colorString = "hsla(" +
-    hue + ", "
-    + saturation + "%,"
-    + lightness  + "%,"
-    + alpha + ")";
-  return colorString;
-};
+
+drawingPad.rotate(45*Math.PI/180);
+drawingPad.rect(100,100,300,300);
+drawingPad.stroke();
