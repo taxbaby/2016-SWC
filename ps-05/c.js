@@ -7,8 +7,8 @@ var drawingPad = canvasB.getContext('2d');
 
 
 
-for (var y = 50; y<=100; y+=15) {
-  for (var x = 25; x<=100; x+=15) {
+for (var y = 25; y<=500; y+=25) {
+  for (var x = 0; x<=500; x+=25) {
 
 drawingPad.rotate(Math.random()*40*Math.PI/180);
 drawingPad.beginPath();
