@@ -1,28 +1,19 @@
-#canvas, #nav {
+#canvas {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 500px;
-  border: 1px solid blue;
+  border: 1px solid #222;
 }
 
-#nav {
-  font-family: monospace;
-  text-decoration: none;
-}
-#nav ul {
-  list-style-type: none;
-  margin-left: auto;
+footer {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  display: block;
   margin-right: auto;
-  max-width: 200px;
+  margin-left: auto;
+  max-width: 300px;
 }
-#nav ul li {
-  display: inline;
-}
-a {
-  text-decoration: none;
-  color: #000;
-}
-a:hover {
-  text-decoration: line-through;
+footer li {
+  list-style: none;
 }

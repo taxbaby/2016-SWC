@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+  font-family: Georgia, serif;
+}
+p {
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: justify;
+}
+footer {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+footer li {
+  list-style: none;
+}
+#info {
+  padding-top: 2em;
+}
+footer ul {
+  padding-top: 5px;
+}
