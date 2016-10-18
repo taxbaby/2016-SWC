@@ -10,7 +10,7 @@ var drawingPad = canvasB.getContext('2d');
 for (var y = 25; y<=500; y+=25) {
   for (var x = 0; x<=500; x+=25) {
 
-drawingPad.rotate(Math.random()*40*Math.PI/180);
+drawingPad.rotate(Math.random()*90*Math.PI/180);
 drawingPad.beginPath();
 drawingPad.moveTo(x, y);
 drawingPad.lineTo(x,y+60);
