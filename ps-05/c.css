@@ -5,3 +5,14 @@
   max-width: 500px;
   border: 1px solid #222;
 }
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 4em;
+  font-family: 'lato', sans-serif;
+  font-size: 12pt;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
