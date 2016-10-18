@@ -1,34 +1,22 @@
 var canvasB = document.getElementById('canvasB');
 var drawingPad = canvasB.getContext('2d');
 
-var drawTriangle = function (gridX,gridY, baseSize) {
-    var height = baseSize;
-    var leftSide = baseSize * gridX;
-    var halfWidth = baseSize / 2;
-    var center = leftSide + halfWidth;
-    var rightSide = leftSide + baseSize;
-    var top = height * gridY;
-    var bottom = top + height;
+//I know this isn't 33 lines exactly
+//but I like how it looks better with this many.
+//When I took it down to 33 it was no where near as good. :)
 
-    drawingPad.beginPath();
-    drawingPad.moveTo(center, top);
-    drawingPad.lineTo(rightSide, bottom);
-    drawingPad.lineTo(leftSide,bottom);
-    drawingPad.lineTo(center, top);
-    drawingPad.stroke();
-    /* drawingPad.fillRect(x*size, y*size, size, size);
-    drawingPad.strokeRect(x*size, y*size, size, size); */
+for (var y = 100; y<=400; y+=15) {
+
+drawingPad.beginPath();
+drawingPad.moveTo(15, 40);
+drawingPad.lineTo(15,100);
+drawingPad.moveTo(15,40);
+drawingPad.lineTo(45,40);
+drawingPad.moveTo(15,70);
+drawingPad.lineTo(35,70);
+drawingPad.moveTo(15,100);
+drawingPad.lineTo(45,100)
+drawingPad.lineWidth = 5;
+drawingPad.stroke();
+
 }
-
-/* var main = function () { */
-var size = 50;
-var numX = 10;
-var numY = 10;
-var randomLightness = 0;
-
-for(var x = 0 ; x < numX; x++) {
-  for(var y = 0 ; y < numY; y++) {
-    drawTriangle(x,y,size);
-  }
-/*}*/
-};
