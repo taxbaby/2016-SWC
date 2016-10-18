@@ -7,19 +7,20 @@ var drawingPad = canvasB.getContext('2d');
 
 
 
-for (var y = 40; y<=400; y++) {
+for (var y = 50; y<=100; y+=15) {
+  for (var x = 25; x<=100; x+=15) {
 
-drawingPad.rotate(Math.random()*100*Math.PI/180);
+drawingPad.rotate(Math.random()*40*Math.PI/180);
 drawingPad.beginPath();
-drawingPad.moveTo(15, y);
-drawingPad.lineTo(15,y+60);
-drawingPad.moveTo(15,y);
-drawingPad.lineTo(45,y);
-drawingPad.moveTo(15,y+30);
-drawingPad.lineTo(35,y+30);
-drawingPad.moveTo(15,y+60);
-drawingPad.lineTo(45,y+60);
+drawingPad.moveTo(x, y);
+drawingPad.lineTo(x,y+60);
+drawingPad.moveTo(x,y);
+drawingPad.lineTo(x+30,y);
+drawingPad.moveTo(x,y+30);
+drawingPad.lineTo(x+20,y+30);
+drawingPad.moveTo(x,y+60);
+drawingPad.lineTo(x+30,y+60);
 drawingPad.lineWidth = 4;
 drawingPad.stroke();
-
+}
 }
