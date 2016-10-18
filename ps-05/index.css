@@ -1,0 +1,17 @@
+body {
+  color: #111;
+  background: #fff;
+  padding-left: 15em;
+  padding-top: 20em;
+  font-family: monospace;
+  font-size: 16px;
+}
+ul li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: line-through;
+}
