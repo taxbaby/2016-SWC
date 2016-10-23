@@ -1,17 +1,36 @@
 body {
-  color: #111;
-  background: #fff;
-  padding-left: 15em;
-  padding-top: 20em;
-  font-family: monospace;
+  color: #8A0707;
+  background: #000;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5em;
+  font-family: "Creepster", cursive;
   font-size: 16px;
+  text-align: center;
+}
+h1 {
+	font-size: 60px;
+}
+p {
+	font-size: 40px;
+}
+ul {
+	padding-left: 0;
 }
 ul li {
   list-style-type: none;
 }
 a {
   text-decoration: none;
+  font-size: 20px;
+}
+img {
+	text-align: center;
+	display: inline-block;
+}
+a, a:visited {
+	color: #F56416;
 }
 a:hover {
-  text-decoration: line-through;
+	color: #E6AF2E;
 }
