@@ -50,15 +50,15 @@ taxbaby.drawLeg = function(ctx, left) {
 
 
 taxbaby.drawTop = function(ctx) {
-  drawImage('head.png', ctx, 0, 0);
+  drawImage('https://taxbaby.github.io/2016-SWC/ps-06/head.png', ctx, 0, 0);
 };
 
 taxbaby.drawMiddle = function(ctx) {
-  drawImage('body.png', ctx, 0, 240);
+  drawImage('https://taxbaby.github.io/2016-SWC/ps-06/body.png', ctx, 0, 240);
 };
 
 taxbaby.drawBottom = function(ctx) {
- drawImage('legs.png', ctx, 0, 480);
+ drawImage('https://taxbaby.github.io/2016-SWC/ps-06/legs.png', ctx, 0, 480);
 };
 
 taxbaby.drawCorpse = function(ctx) {
