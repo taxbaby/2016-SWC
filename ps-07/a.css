@@ -1,0 +1,12 @@
+body {
+	height: 100%;
+	width: 100%;
+	background: #FF5E5B;
+}
+.dot {
+	height: 80px;
+	width: 80px;
+	border-radius: 40px;
+	background: #05A8AA;
+	position: absolute;
+}
