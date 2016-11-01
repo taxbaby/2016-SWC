@@ -1,0 +1,43 @@
+body {
+	background: #000;
+	padding-top: 10px;
+	background-image: url("formica.jpg");
+	background-size: cover;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+ul li {
+	display: inline;
+}
+#card {
+	width: 500px;
+	height: 350px;
+	background: #FF5E5B;
+	font-family: 'Ranchers', sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	margin-top: 100px;
+	opacity: .9;
+}
+#list {
+	height: 60px;
+	width: 100px;
+	border-radius: 50px;
+	background: #05A8AA;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-top: 40px;
+}
+/* Background image via Keyboard Hut */
+a {
+	color: #FCFCFC;
+}
+a:visited {
+	color: #FED766;
+}
