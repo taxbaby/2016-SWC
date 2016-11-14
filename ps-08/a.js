@@ -16,7 +16,7 @@ var makeColor = function(hue, sat, light, alph) {
 //Clear the screen. 
 
 var clearScreen = function() {
-  ctx.fillStyle = "hsla(0,10%,100%,.04)";
+  ctx.fillStyle = "hsla(207, 98%, 24%,.25)";
   ctx.fillRect(0, 0, 500, 500);
 };
 
@@ -36,8 +36,8 @@ var makePoint = function (x,y) {
     if (beginX > 500) {
         beginX = 0;
         nyanX = 0;
-        beginY = beginY + 10;
-        nyanY = nyanY + 10;
+        beginY = beginY + 20;
+        nyanY = nyanY + 20;
     };
 
     if (beginY>500) {
@@ -50,5 +50,5 @@ var makePoint = function (x,y) {
  };
 
 
-setInterval(makePoint,100);
+setInterval(makePoint,50);
 
