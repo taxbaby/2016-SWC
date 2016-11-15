@@ -101,7 +101,10 @@ var drawStars = function() {
     move(point);
     wrap(point);
     ctx.fillStyle = makeColor(hue, 0, 80, .5);
-    ctx.fillRect(point.x, point.y, point.size, point.size);
+    ctx.beginPath();
+    ctx.arc(point.x,point.y,point.size,0,2*Math.PI);
+    ctx.fill();
+    ctx.strokeStyle = makeColor(hue, 0, 80, .5);
   }
   requestAnimationFrame(drawStars);
 };
@@ -115,7 +118,7 @@ var makeStars = function() {
       x: x,
       y: 250,
       size: size,
-      speed: speed
+      speed: speed/2
     });
   }
 };
