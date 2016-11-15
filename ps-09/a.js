@@ -1,11 +1,14 @@
 var ctx = document.getElementById("walk").getContext('2d');
 
 var beginX = 0;
-var beginY = 0;
+var beginY = 250;
 var hue = 0;
-
+var height = 500;
+var width = 500;
 var nyan = new Image();   
 nyan.src = 'nyan.png'; 
+var points = [];
+var numPoints = 50;
 
 var makeColor = function(hue, sat, light, alph) {
   return "hsla(" + hue + "," + sat + "%," + light + "%," + alph + ")";
@@ -21,7 +24,7 @@ var clearScreen = function() {
 //Build the walker.
 
 var makePoint = function (x,y) {
-    var size = 20;
+    var size = 25;
     //Clear the last cat + rainbow
     ctx.fillStyle = makeColor(207, 98, 24,1);
     ctx.fillRect(beginX, beginY,size,size);
@@ -32,7 +35,7 @@ var makePoint = function (x,y) {
     clearScreen();
     //update position and hue
     beginX = beginX + 10;
-    hue = hue + 25;
+    hue = hue + 15;
 
     if (beginX > 500) {
         beginX = 0;
@@ -51,8 +54,73 @@ var makePoint = function (x,y) {
     ctx.stroke();
 
     ctx.drawImage(nyan,beginX,beginY);
- };
+   
+};
 
+//Stars
 
+var wrap = function(point) {
+  if (point.x > width) {
+    point.x = 0;
+    point.y = point.y + 11;
+  }
+  if (point.y > height) {
+    point.y = 0;
+  }
+  if (point.y < 0) {
+    point.y = height;
+  }
+
+};
+
+var move = function(p) {
+  var speed = p.speed;
+  var direction = Math.random();
+  if (direction < 0.70) { // move up 
+    p.y = p.y - speed;
+  } else if (direction < 0.80) {
+    p.x = p.x - speed;
+  } else if (direction < 0.90) {
+    p.y = p.y + speed;
+  } else {
+    p.x = p.x + speed;
+  }
+}
+
+var makeColor = function(hue, sat, light, alph) {
+  return "hsla(" + hue + "," + sat + "%," + light + "%," + alph + ")";
+};
+
+var drawStars = function() {
+
+  ctx.strokeStyle = '';
+
+  for (var i = 0; i < points.length; i++) {
+    var point = points[i];
+    var hue = point.y / 5 + 180;
+    move(point);
+    wrap(point);
+    ctx.fillStyle = makeColor(hue, 0, 80, .5);
+    ctx.fillRect(point.x, point.y, point.size, point.size);
+  }
+  requestAnimationFrame(drawStars);
+};
+
+var makeStars = function() {
+  for (var i = 0; i < numPoints; i++) {
+    var size = Math.random() * 10;
+    var x = Math.random() * width;
+    var speed = 10 - size;
+    points.push({
+      x: x,
+      y: 250,
+      size: size,
+      speed: speed
+    });
+  }
+};
+
+makeStars();
+requestAnimationFrame(drawStars);
 setInterval(makePoint,75);
 
