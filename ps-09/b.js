@@ -101,10 +101,8 @@ var drawStars = function() {
     move(point);
     wrap(point);
     ctx.fillStyle = makeColor(hue, 0, 80, .5);
-    ctx.beginPath();
     ctx.arc(point.x,point.y,point.size,0,2*Math.PI);
-    ctx.fill();
-    ctx.strokeStyle = makeColor(hue, 0, 80, .5);
+  
   }
   requestAnimationFrame(drawStars);
 };

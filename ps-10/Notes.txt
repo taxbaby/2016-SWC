@@ -1,0 +1,15 @@
+Canvas (also JPEG, GIF):
+
+Take some shape definitions and make that into a block of pixels. 
+Draw the circle, adjust the x, draw the circle.
+
+Vector image formats (PDF, SVG, some TIFFs, fonts)
+
+Defined by curvatures and paths
+don't have particalr scale
+has nothing to do with pixels 
+Vector format. Also a document format.
+You can draw a shape and animate it without redrawing the screen, unike in canvas.
+Has no inherent scale (so infinitely scalable, no pixelization)
+
+ 
