@@ -59,11 +59,35 @@ svg.selectAll('ellipse')
   .attr('class', 'weight')
   .attr("cx", yearToX)
   .attr("cy", percentToY)
-  .attr("fill", "hsl(50,40%,60%)")
+  .attr("fill", "hsl(250,40%,60%)")
   .attr("rx", '5')
   .attr("ry",'5')
-  console.log("butt");
 
+//Rent burden
+
+var rentBurden = [
+  {year: 2000, percent: 36},
+  {year: 2010, percent: 50}
+];
+
+function percentToY (data) {
+ return percentScale(data.percent);
+};
+
+function yearToX (data) {
+  return yearScale(data.year);
+};
+
+svg.selectAll('rect')
+  .data(rentBurden)
+  .enter()
+  .append("rect")
+  .attr('class', 'weight')
+  .attr("x", yearToX)
+  .attr("y", percentToY)
+  .attr("fill", "hsl(300,40%,60%)")
+  .attr("width", '10')
+  .attr("height",'10')
 
 
 svg.append('g')

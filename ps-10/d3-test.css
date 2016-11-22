@@ -16,8 +16,34 @@ svg {
   background-color: hsl(0,10%,90%);
   font-size: 11pt;
 }
-
-
+.key {
+  height: 120px;
+  width: 400px;
+  background-color: #eee;
+  color: #111;
+  border: 1px solid black;
+  font-family: Palatino, serif;
+  font-size: 11px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.black {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: hsl(0,40%,60%);
+}
+.white {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: hsl(250,40%,60%);
+}
+.burden {
+  width: 10px;
+  height: 10px;
+  background-color: hsl(300,40%,60%);
+}
 .horizontal-bar {
   width: 500px;
   display: flex;
