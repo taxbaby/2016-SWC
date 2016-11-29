@@ -24,7 +24,7 @@ body {
   align-items: center;
 }
 svg {
-  background-color: hsl(0,10%,90%);
+  background-color: hsla(0,10%,90%,.97);
   font-size: 11pt;
 }
 .horizontal-bar {
