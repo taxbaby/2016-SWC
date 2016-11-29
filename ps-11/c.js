@@ -4,8 +4,8 @@ var timeData = [
   { value: 0, name: "seconds"}
   ]  
 
-var makeColor = function(hue, sat, light, alph) {
-  return "hsla(" + hue + "," + sat + "%," + light + "%," + alph + ")";
+var makeColor = function(hue, sat, light) {
+  return "hsl(" + hue + "," + sat + "%," + light + "%)";
 };
 
 function updateTimeData() {
@@ -29,4 +29,6 @@ var minuteScale = secondScale = d3.scaleLinear()
 
 var div = d3.select('div');
 var colorClock = div.append('svg').attr('width',300).attr('height',300);
+
+
 
