@@ -1,0 +1,77 @@
+body {
+	margin: 0 auto;
+	max-width: 50em;
+	font-family: "Helvetica", "Arial", sans-serif;
+	line-height: 1.5;
+	padding-top: 4em 1em;
+	background-color: #f8f8f8;
+	color: #161819;
+}
+h2 {
+	margin-top: 1em;
+	padding-top: 1em;
+}
+nav {
+	padding-top: 120px;
+	padding-left: 40px;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	font-size: 15px;
+}
+nav a {
+	text-decoration: none;
+}
+nav a:hover {
+	text-decoration: underline;
+}
+img {
+	max-width: 40em;
+	padding-top: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+a {
+	color: #95B2B8;
+}
+a:hover {
+	color: #307351;
+}
+a:visited {
+	color: #70163C;
+}
+.pastworkposition, .pastworktime {
+	padding: 1px;
+	margin: 1px;
+}
+.pastworkorg {
+	padding-top: 1px;
+	margin-top: 1px;
+}
+.pastworktop {
+	padding-top: 1em;
+}
+.contactlist {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.contactlist li {
+	display: inline;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.pastworktop li {
+	max-width: 35em;
+}
+#indextitle {
+	text-align: center;
+}
+#aboutme {
+	max-width: 35em;
+	padding-top: 5em;
+	padding-left: 2em;
+}
