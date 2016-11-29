@@ -32,7 +32,7 @@ function percentToY2 (data) {
 //x axis is years
 //y axis is percent
 var jsonData = [
-	//Percent black population
+	//Percent of Roxbury's population that is black
 	{
 		"year1": 2000,
 		"percent1": 55,
@@ -40,16 +40,23 @@ var jsonData = [
 		"percent2": 45,
 		"stroke": "hsl(0,40%,60%)"
 	},
-	//Percent white population
+	//Percent of Roxbury's population that is white
 	{
 		"year1": 2000,
 		"percent1": 26,
 		"year2": 2010,
 		"percent2": 33,
-		"stroke": "hsl(0,40%,60%)"	
+		"stroke": "hsl(250,40%,60%)"
+	},
+	//Percent of households in Greater Boston area who are rent burdened
+	{
+		"year1": 2000,
+		"percent1": 36,
+		"year2": 2010,
+		"percent2": 50,
+		"stroke": "hsl(300,40%,60%)",
+		"dasharray": "3,3"
 	}
-	//Percent rent burden
-	{}
 ]
 
 var lines = svg.selectAll("lines")
@@ -63,7 +70,8 @@ var lineAttributes = lines
 	.attr("x2", yearToX2)
 	.attr("y2", percentToY2)
 	.attr("stroke-width", 2)
-	.attr("stroke", function (d) { return d.stroke; });
+	.attr("stroke", function (d) { return d.stroke; })
+	.style("stroke-dasharray", (function (d) {return d.dasharray;}) )
 
 
 //The axes!
