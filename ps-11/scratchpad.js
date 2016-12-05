@@ -1,4 +1,8 @@
 HUE = HOURS
+
+hue. there are 360 degrees. There are 24 i. 
+
+
 SATURATION = MINUTES
 LIGHTNESS = SECONDS 
 
