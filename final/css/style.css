@@ -1,26 +1,57 @@
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Roboto Light", "Segoe UI Web Light", "Segoe UI Light", "Segoe UI Web Regular", "Segoe UI", Helvetica, Arial, sans-serif; 
-  margin: 1em;
-  background: #293950;
+  margin: 0 auto;
+  max-width: 50em;
+  line-height: 1.5;
+  padding-top: 4em 1em;
+  font-family: "Lato", sans-serif; 
+    font-weight: 300;
+    background: #263D42;
   color: #ecf0f0;
+  font-size: 14px;
+}
+body p {
+color: #ecf0f0;
+}
+nav {
+  padding-top: 20px;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+nav li {
+  display: inline;
+  padding: 15px;
+}
+nav a {
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
 }
 section {
   margin: 0 auto;
 }
 h1 {
-  font-weight: normal;
+  font-weight: 300;
   font-size: 2.4em;
   margin-bottom: 0;
 }
 a {
   color: gold;
 }
+a:hover {
+  color: #DF4949;
+}
 footer {
 	font-size: 10px;
 }
 .container {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 .black {fill: #DF4949; background: #DF4949;}
 
@@ -37,5 +68,7 @@ footer {
 .other { fill: #45B29D; background: #45B29D;}
 
 #copy {
-	max-width: 400px;
+    -webkit-columns: 250px 2; /* Chrome, Safari, Opera */
+    -moz-columns: 250px 2; /* Firefox */
+    columns: 250px 2;
 }

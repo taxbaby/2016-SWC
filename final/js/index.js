@@ -11,7 +11,7 @@ var json = {
         'latinx': 4336,
         'asian': 503,
         'nativeamerican': 204,
-        //'nativePacific': 0,
+        'nativePacific': 0,
         'other': 2251,
       }
     }
