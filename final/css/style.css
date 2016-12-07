@@ -72,3 +72,10 @@ footer {
     -moz-columns: 250px 2; /* Firefox */
     columns: 250px 2;
 }
+#button {
+  height: 4em;
+  width: 10em;
+  background-color: gold;
+  color: black;
+  border-radius: 50px;
+}
