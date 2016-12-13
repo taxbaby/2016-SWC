@@ -75,37 +75,36 @@ button {
 	flex-direction: column;
 }
 .black {
-  fill: #DF4949; 
-  background: 
-  #DF4949;
+  fill: #799DB4; 
+  background: #799DB4;
 }
 .white {
-  fill: #E27A3F; 
-  background: #E27A3F;
+  fill: #F1AB86; 
+  background: #F1AB86;
 }
 .hispanic {
-  fill: #EFC94C; 
-  background: #EFC94C;
+  fill: #F7BB4C; 
+  background: #F7BB4C;
 }
 
 .asian {
-  fill: #9B59B6; 
-  background: #9B59B6;
+  fill: #C0BCB5; 
+  background: #C0BCB5;
 }
 
 .nativeamerican {
-  fill: #3498db; 
-  background: #3498db;
+  fill: #70A288; 
+  background: #70A288;
 }
 
 .nativepacific {
-  fill: #F495A3; 
-  background: #F495A3;
+  fill: #F46D69; 
+  background: #F46D69;
 }
 
 .other {
-  fill: #45B29D; 
-  background: #45B29D;
+  fill: #C28CAE; 
+  background: #C28CAE;
 }
 
 .legend { 
