@@ -1,14 +1,28 @@
-(function() {
-
-  //Census data
+//Census data
+//Used for exploratory purposes only. More reporting and understanding of Jennings' methodology is required to verify figures.
 var json = {
+   '1990': {
+    'year': 1990,
+    'population': {
+      'total': 15107,
+      'race': {
+        'black': 12187,
+        'white': 1210,
+        'hispanic': 2901,
+        'asian': 73,
+        'nativeamerican': 85,
+        'nativePacific': 0,
+        'other': 1552,
+      }
+    }
+  },
   '2000': {
     'population': {
       'total': 21284,
       'race': {
         'black': 11597,
         'white': 5468,
-        'latinx': 4336,
+        'hispanic': 4336,
         'asian': 503,
         'nativeamerican': 204,
         'nativePacific': 0,
@@ -22,86 +36,106 @@ var json = {
       'race': {
         'black': 10095,
         'white': 7411,
-        'latinx': 5386,
+        'hispanic': 5386,
         'asian': 1140,
         'nativeamerican': 152,
-        'nativepacific': 6,
+        'nativePacific': 6,
         'other': 2388
       }
     }
   }
 };
-	// D3 Bubble Chart 
 
-	var diameter = 600;
-  var tracker = 0;
+var tracker = 0;
 
-	var svg = d3.select('#graph').append('svg')
-					.attr('width', diameter)
-					.attr('height', diameter);
+function processData() {
+  if (tracker == 0 ) {
+    var obj = json['1990'].population.race;
+  } else if (tracker == 1) {
+    var obj = json['2000'].population.race;
+  } else {
+    var obj = json['2010'].population.race;
+  }
+  var newDataSet = [];
+  for(var prop in obj) {
+    newDataSet.push({name: prop, className: prop.toLowerCase(), size: obj[prop]});
+  };
+  return {children: newDataSet};
+}
 
-	var bubble = d3.layout.pack()
-				.size([diameter, diameter])
-				.value(function(d) {return d.size;})
-         // .sort(function(a, b) {
-				// 	return -(a.value - b.value)
-				// }) 
-				.padding(3);
+var year = document.getElementById("theYear");
 
- // function drawBubbles(m) {
-   // var nodes = bubble
-//  }
-  
-  var newStuff = processData(json);
-  // generate data with calculated layout values
-  var nodes = bubble.nodes(newStuff)
-						.filter(function(d) { return !d.children; }); // filter out the outer bubble
+function newData() {
+  if (tracker == 0) {
+    tracker = 1;
+    year.innerHTML = 2000;
+  } else if (tracker == 1) {
+    tracker = 2 
+    year.innerHTML = 2010;;
+  } else {
+    tracker = 0;
+    year.innerHTML = 1990;;
+  }
+  newStuff = processData();
+  drawBubbles(newStuff);
+}
+
+theInterval = setInterval(newData,2500);
+
+function clickPause() {
+  clearInterval(theInterval);
+};
+
+function clickResume () {
+  theInterval = setInterval(newData,2500);
+};
+
+var diameter = 600;
+var duration = 600;
+var delay = 2;
+
+var svg = d3.select('#graph').append('svg')
+				.attr('width', diameter)
+				.attr('height', diameter);
+
+var bubble = d3.layout.pack()
+			.size([diameter, diameter])
+			.value(function(d) {return d.size;})
+			.padding(3);
+
+var newStuff = processData();
+
+function drawBubbles(someData) {
+
+  var nodes = bubble.nodes(someData)
+      .filter(function(d) { return !d.children; }); // filter out the outer bubble
  
   var vis = svg.selectAll('circle')
-					.data(nodes);
-  
-  var label = svg.selectAll('text')
-          .data(nodes);
-  
+      .data(nodes, function(d) { return d.name; });
+
+  vis.transition()
+      .duration(duration * 1.2)
+      .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
+      .attr('r', function(d) { return d.r; }) 
+      .transition()
+      .duration(duration * 1.2)
+      .style('opacity', 1);
+
   vis.enter().append('circle')
-			.on('click',function (d) { 
-        tracker = 1;
-        processData();
-        //bubble.nodes(newStuff);
-      })
       .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
-			.attr('r', function(d) { return d.r; })
-			.attr('class', function(d) { return "circle " + d.className; });
-    
+      .attr('r', function(d) { return d.r; })
+      .attr('class', function(d) { return "circle " + d.className; })
+      .transition()
+      .duration(duration * 1.2)
+      .style('opacity', 1);
 
-  vis.enter().append('text')
-      .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
-      .text( function (d) { return d.className })
-      .attr("font-family", "sans-serif")
-      .attr("font-size", "14px");
+    vis.exit().remove();
+
+}
+
+drawBubbles(newStuff);
 
 
-
- function processData() {
-      if (tracker == 0 ) {
-       var obj = json['2000'].population.race;
-  }
-      else {
-        var obj = json['2010'].population.race;
-        newStuff = obj;
-  }
-    var newDataSet = [];
-
-   for(var prop in obj) {
-      newDataSet.push({name: prop, className: prop.toLowerCase(), size: obj[prop]});
-      console.log("obj." + prop + " = " + obj[prop]);
-    };
-
-    return {children: newDataSet};
-  } 
-
- 
-})();
 
 //https://www.pubnub.com/blog/2014-10-08-fun-with-d3js-data-visualization-eye-candy-with-streaming-json/
 //http://bl.ocks.org/mmattozzi/7018021

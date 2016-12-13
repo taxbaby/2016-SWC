@@ -1,19 +1,22 @@
 body {
-  margin: 0 auto;
-  max-width: 50em;
-  line-height: 1.5;
-  padding-top: 4em 1em;
-  font-family: "Lato", sans-serif; 
-    font-weight: 300;
-    background: #263D42;
+  font-family: "Roboto Slab", serif; 
+  background: #263D42;
   color: #ecf0f0;
-  font-size: 14px;
+  font-size: 16px;
 }
-body p {
+body p, h1, h2, h3, h4, section, nav, footer {
 color: #ecf0f0;
+max-width: 650px;
+line-height: 1.5;
+margin-left: auto;
+margin-right: auto;
+letter-spacing: .15px;
 }
 nav {
   padding-top: 20px;
+}
+img {
+  max-width: 100%;
 }
 nav ul {
   list-style-type: none;
@@ -48,34 +51,78 @@ a:hover {
 }
 footer {
 	font-size: 10px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+button {
+  width: 45px;
+  height: 17px;
+  margin: auto;
+  font-family: "Roboto Condensed", sans-serif;
+  border: none;
+  color: #263D42;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 2px;
+  background-color: #ecf0f0;
 }
 .container {
 	display: flex;
 	flex-direction: column;
 }
-.black {fill: #DF4949; background: #DF4949;}
-
-.white {fill: #E27A3F; background: #E27A3F;}
-
-.latinx { fill: #EFC94C; background: #EFC94C;}
-
-.asian { fill: #9B59B6; background:  #9B59B6;}
-
-.nativeamerican {fill: #3498db; background: #3498db;}
-
-.nativePacific {fill: #F495A3; background: #F495A3;}
-
-.other { fill: #45B29D; background: #45B29D;}
-
-#copy {
-    -webkit-columns: 250px 2; /* Chrome, Safari, Opera */
-    -moz-columns: 250px 2; /* Firefox */
-    columns: 250px 2;
+.black {
+  fill: #DF4949; 
+  background: 
+  #DF4949;
 }
-#button {
-  height: 4em;
-  width: 10em;
-  background-color: gold;
-  color: black;
-  border-radius: 50px;
+.white {
+  fill: #E27A3F; 
+  background: #E27A3F;
+}
+.hispanic {
+  fill: #EFC94C; 
+  background: #EFC94C;
+}
+
+.asian {
+  fill: #9B59B6; 
+  background: #9B59B6;
+}
+
+.nativeamerican {
+  fill: #3498db; 
+  background: #3498db;
+}
+
+.nativepacific {
+  fill: #F495A3; 
+  background: #F495A3;
+}
+
+.other {
+  fill: #45B29D; 
+  background: #45B29D;
+}
+
+.legend { 
+  list-style: none; 
+  font-family: "Roboto Condensed", sans-serif;
+  display: inline-block;
+  margin-left: 250px;
+}
+
+.legend li { 
+  float: left; 
+  margin-right: 10px;
+}
+.legend span { 
+  float: left; 
+  width: 10px; 
+  height: 10px; 
+  margin: 2px;
+  margin-top: 4px; 
+  border-radius: 5px;
+}
+.explainer {
+  font-family: "Roboto Condensed", sans-serif;
 }
