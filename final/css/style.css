@@ -1,16 +1,24 @@
 body {
   font-family: "Roboto Slab", serif; 
-  background: #263D42;
+  background: #2A3A3D;
   color: #ecf0f0;
   font-size: 16px;
 }
 body p, h1, h2, h3, h4, section, nav, footer, div {
-color: #ecf0f0;
-max-width: 650px;
-line-height: 1.5;
-margin-left: auto;
-margin-right: auto;
-letter-spacing: .15px;
+  color: #ecf0f0;
+  max-width: 650px;
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+}
+body p, section, nav, footer {
+  letter-spacing: .15px;
+}
+h1, h2, h3, h4 {
+  letter-spacing: .5px;
+}
+h4 {
+  font-variant: small-caps;
 }
 nav {
   padding-top: 20px;
@@ -56,7 +64,7 @@ button {
   margin: auto;
   font-family: "Roboto Condensed", sans-serif;
   border: 1px solid black;
-  color: #263D42;
+  color: #2A3A3D;
   font-size: 12px;
   cursor: pointer;
   margin-top: 10px;
