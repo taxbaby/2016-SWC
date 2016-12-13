@@ -4,7 +4,7 @@ body {
   color: #ecf0f0;
   font-size: 16px;
 }
-body p, h1, h2, h3, h4, section, nav, footer {
+body p, h1, h2, h3, h4, section, nav, footer, div {
 color: #ecf0f0;
 max-width: 650px;
 line-height: 1.5;
@@ -35,9 +35,6 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
-section {
-  margin: 0 auto;
-}
 h1 {
   font-weight: 300;
   font-size: 2.4em;
@@ -58,12 +55,11 @@ button {
   height: 17px;
   margin: auto;
   font-family: "Roboto Condensed", sans-serif;
-  border: none;
+  border: 1px solid black;
   color: #263D42;
   font-size: 12px;
   cursor: pointer;
   margin-top: 10px;
-  border-radius: 2px;
   background-color: #ecf0f0;
 }
 .container {
@@ -107,22 +103,27 @@ button {
 .legend { 
   list-style: none; 
   font-family: "Roboto Condensed", sans-serif;
-  display: inline-block;
-  margin-left: 250px;
+  font-size: 14px;
+  height: 20px;
 }
 
-.legend li { 
-  float: left; 
-  margin-right: 10px;
-}
-.legend span { 
-  float: left; 
-  width: 10px; 
-  height: 10px; 
-  margin: 2px;
-  margin-top: 4px; 
-  border-radius: 5px;
+.legend div { 
+  text-align: center;
+  margin: 4px; 
+  border-radius: 2px;
 }
 .explainer {
   font-family: "Roboto Condensed", sans-serif;
+}
+.graphicContainer {
+  display: flex;
+  flex-direction: column;
+}
+.keyGraph {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: no wrap;
+}
+#theYear {
+  font-size: 40px;
 }
